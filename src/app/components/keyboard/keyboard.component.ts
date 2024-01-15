@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-keyboard',
@@ -8,5 +8,11 @@ import { Component, Input } from '@angular/core';
 export class KeyboardComponent {
 
   @Input() item!: string;
+  @Output() onClickLetter = new EventEmitter();
 
+
+  getValueLetter(){
+    console.log("ma lettre", this.item);
+    this.onClickLetter.emit(this.item);
+  }
 }
