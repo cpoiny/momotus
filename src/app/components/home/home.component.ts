@@ -21,6 +21,7 @@ name = new FormControl('');
 
 onSubmit(){
   this.prenom = this.name.value;
+  console.log(this.prenom);
   this.motusService.getName(this.prenom!);
   if (this.prenom !== ""){
     this.route.navigate(['game']);
