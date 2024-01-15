@@ -38,3 +38,7 @@ header{
     /* border: red solid 5px; */
     /* width: 150px; */
 }
+
+.texte{
+    white-space: break-spaces;
+}

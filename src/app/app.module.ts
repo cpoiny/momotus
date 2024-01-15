@@ -9,6 +9,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MotComponent } from './components/mot/mot.component';
 import { KeyboardComponent } from './components/keyboard/keyboard.component';
 import { ButtonComponent } from './components/button/button.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReglesComponent } from './components/regles/regles.component';
 
 
 @NgModule({
@@ -20,11 +24,16 @@ import { ButtonComponent } from './components/button/button.component';
     MotComponent,
     KeyboardComponent,
     ButtonComponent,
+    ReglesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatDialogModule,
+    BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
