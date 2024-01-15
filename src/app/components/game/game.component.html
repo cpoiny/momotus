@@ -17,6 +17,6 @@
     <div class="keyboard">
         <app-keyboard *ngFor="let item of keyboard" [item]="item" (onClickLetter)="updateValueLetter($event)"></app-keyboard>
         <app-button [title]="supprimer"></app-button>
-        <app-button [title]="valider"></app-button>
+        <app-button (click)="verifierProposition()" [title]="valider"></app-button>
     </div>
 </section>

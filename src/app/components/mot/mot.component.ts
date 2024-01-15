@@ -16,18 +16,20 @@ export class MotComponent {
 // recoit le mot saisi sur le clavier
   @Input() mot! :string;
   motATrouver!: string | undefined;
-  grille: string[] | undefined;
+  premiereLettre!: string;
   
 
   ngOnInit(){
 
     this.motATrouver = this.motusService.motATrouver;
-    this.creerGrille();
+    console.log('mot a trouver', this.motATrouver);
+    const decouperMotATrouver = this.motATrouver?.split('');
+    this.premiereLettre = decouperMotATrouver![0];
   }
 
-  creerGrille(){
-    this.grille = this.motATrouver?.split("");
-    console.log("ma grille", this.grille);
-  }
+  // creerGrille(){
+  //   this.grille = this.motATrouver?.split("");
+  //   console.log("ma grille", this.grille);
+  // }
 
 }

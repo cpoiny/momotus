@@ -13,14 +13,16 @@ export class GameComponent {
 
   joueur!: string | undefined;
   mot :string = "";
+  motATrouver!: string;
+  lettre! : string;
+  listeDeProposition!: string[];
   keyboard: string[] = ['A', 'Z', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Q', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'W', 'X', 'C', 'V', 'B', 'N'];
 
   supprimer: string = "Supprimer";
   valider: string = "Valider";
 
-  liste : string[] = ["PASTEQUE", "MAISON", "MANGER", "ORDINATEUR"]
+  liste : string[] = ["PASTEQUE", "PRESSION", "REGARDER", "ETUDIANT"]
 
-  bodyText!: string;
 
   constructor(
     public motusService : MotusService,
@@ -30,19 +32,25 @@ export class GameComponent {
 
   ngOnInit(){
     this.joueur = this.motusService.prenom;
+    this.listeDeProposition = [];
     this.choisirMotDansLaListe();
-    console.log("le mot choisi est", this.choisirMotDansLaListe());
-
   }
 
   updateValueLetter(lettre:string){
-    this.mot +=lettre;
-    console.log("mon mot", this.mot);
+    this.listeDeProposition.push(this.motATrouver[0]);
+    if(this.mot.length <= 8){
+      this.mot +=lettre;
+      this.lettre = lettre;
+    }
+    if (this.mot.length == 7){
+      this.verifierProposition();
+    }
   }
 
   choisirMotDansLaListe(): string {
     let index = Math.floor(Math.random() * this.liste.length);
-    var motATrouver = this.liste[index];
+    const motATrouver = this.liste[index];
+    this.motATrouver = motATrouver;
     this.motusService.getMotATrouver(motATrouver);
     return motATrouver;
   }
@@ -51,6 +59,13 @@ export class GameComponent {
     this.dialog.open(ReglesComponent);
   }
 
+  verifierProposition() {
+    this.listeDeProposition.push(this.mot);
+    this.motusService.checkMot(this.mot);
+
+  }
+
+ 
 
 }
 

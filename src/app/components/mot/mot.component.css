@@ -8,3 +8,7 @@ td{
 tr{
     border: green solid 2px;
 }
+
+.premiereLettre{
+    background-color: var(--red);
+}
