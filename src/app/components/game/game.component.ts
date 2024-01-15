@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MotusService } from 'src/app/services/motus.service';
 
 @Component({
   selector: 'app-game',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class GameComponent {
 
+  joueur!: string | undefined
+
+  constructor(
+    public motusService : MotusService
+  ){}
+
+  ngOnInit(){
+    this.joueur = this.motusService.prenom;
+  }
 }

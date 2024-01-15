@@ -1,0 +1,42 @@
+h1{
+    font-weight: bold;
+    font-size: 42;
+}
+
+.icones {
+    display: flex;
+    margin: 10px;
+}
+
+.symbole{
+    display: block;
+    width: 30px;
+    height: 30px;
+   
+}
+.rouge {
+    background: var(--red);
+}
+
+.jaune {
+    border-radius : 50%;
+    background: var(--yellow);
+}
+
+.bleu {
+    background: var(--blue);
+}
+
+
+.submit{
+    background-color: blue;
+    padding: 10px;
+    border: none;
+}
+
+.input{
+    background-color: white;
+    padding: 10px;
+    border: none;
+    color: black;
+}

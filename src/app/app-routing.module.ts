@@ -5,7 +5,7 @@ import { GameComponent } from './components/game/game.component';
 
 const routes: Routes = [
   {
-    path:'home',
+    path:'',
     component: HomeComponent
   },
   {
