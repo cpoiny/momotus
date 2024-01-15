@@ -1,8 +1,18 @@
 <header>
     <p>Prêt.e {{joueur}}?</p>
-    <h1>MOMOTUS</h1>
-   <button class="regles" >?</button>
+    <h1>MOMOMOTUS</h1>
+    <button class="regles">?</button>
 </header>
 
 <hr>
 
+<section class="section">
+    <app-mot class="mot" [mot]="mot"></app-mot>
+
+    <div class="keyboard">
+        <app-keyboard *ngFor="let item of keyboard" [item]="item">clavier</app-keyboard>
+        <app-button [title]="supprimer"></app-button>
+        <app-button [title]="valider"></app-button>
+    </div>
+    <p>test cynthia2</p>
+</section>

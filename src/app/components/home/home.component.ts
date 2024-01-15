@@ -22,7 +22,7 @@ name = new FormControl('');
 onSubmit(){
   this.prenom = this.name.value;
   this.motusService.getName(this.prenom!);
-  if (this.prenom != null){
+  if (this.prenom !== ""){
     this.route.navigate(['game']);
   }
 }

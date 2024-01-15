@@ -1,17 +1,29 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 h1{
     font-weight: bold;
-    font-size: 42;
+    font-size: 42px;
+    margin-bottom: 2vh;
 }
+
+/* ICONE MOMOTUS*/
 
 .icones {
     display: flex;
-    margin: 10px;
+    margin: 0 10px 50px;
 }
 
 .symbole{
     display: block;
     width: 30px;
     height: 30px;
+    margin: 5px;
    
 }
 .rouge {
@@ -28,15 +40,24 @@ h1{
 }
 
 
+
+/* FORMULAIRE */
+
+.label{
+    font-size: 28px;
+}
+
 .submit{
     background-color: blue;
     padding: 10px;
+    font-size: 18px;
     border: none;
 }
 
 .input{
     background-color: white;
     padding: 10px;
+    font-size: 18px;
     border: none;
     color: black;
 }
