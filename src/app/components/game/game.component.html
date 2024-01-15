@@ -10,9 +10,8 @@
     <app-mot class="mot" [mot]="mot"></app-mot>
 
     <div class="keyboard">
-        <app-keyboard *ngFor="let item of keyboard" [item]="item">clavier</app-keyboard>
+        <app-keyboard *ngFor="let item of keyboard" [item]="item" (onClickLetter)="updateValueLetter($event)"></app-keyboard>
         <app-button [title]="supprimer"></app-button>
         <app-button [title]="valider"></app-button>
     </div>
-    <p>test cynthia2</p>
 </section>
