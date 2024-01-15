@@ -1,0 +1,8 @@
+.boutons-clavier{
+    border: white solid 2px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 45px;
+    cursor: pointer;
+
+}

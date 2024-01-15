@@ -1,10 +1,9 @@
 header{
     display: flex;
-    width: 80vw;
+    width: 100vw;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 1vh;
-    border: red solid 2px;
 }
 
 .regles{
@@ -12,4 +11,27 @@ header{
     width: 30px;
     height: 30px;
     border-radius: 50%;
+}
+
+.section{
+    height:80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.keyboard{
+    width: 40vw;
+}
+
+.boutons-clavier{
+    border: white solid 2px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 45px;
+}
+
+.mot{
+    border: blue solid 2px;
 }

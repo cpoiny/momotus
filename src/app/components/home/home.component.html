@@ -1,15 +1,23 @@
-<h1>MOMOTUS</h1>
+<div class="section">
 
-<div class="icones">
-    <span class="symbole rouge"></span>
-    <span class="symbole jaune"></span>
-    <span class="symbole bleu"></span>
-</div>
 
-<form>
-    <label for="name">Pour bien commencer, quel est ton prénom ?</label>
-    <div>
-        <input id="name" class="input" type="text" [formControl]="name">
-        <button class="submit" type="submit" (click)="onSubmit()">Let's go!</button>
+
+
+    <h1>MOMOTUS</h1>
+    
+    <div class="icones">
+        <span class="symbole rouge"></span>
+        <span class="symbole jaune"></span>
+        <span class="symbole bleu"></span>
     </div>
-</form>
+    
+    <form>
+        <label  class="label" for="name">Pour bien commencer, quel est ton prénom ?</label>
+        <div>
+            <input id="name" class="input" type="text" [formControl]="name">
+            <button class="submit" type="submit" (click)="onSubmit()">Let's go!</button>
+        </div>
+    </form>
+
+
+</div>

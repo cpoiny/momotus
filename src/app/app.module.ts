@@ -6,6 +6,9 @@ import { HomeComponent } from './components/home/home.component';
 import { GameComponent } from './components/game/game.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MotComponent } from './components/mot/mot.component';
+import { KeyboardComponent } from './components/keyboard/keyboard.component';
+import { ButtonComponent } from './components/button/button.component';
 
 
 @NgModule({
@@ -14,6 +17,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     GameComponent,
     HeaderComponent,
+    MotComponent,
+    KeyboardComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
