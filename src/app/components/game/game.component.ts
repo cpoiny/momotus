@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+
+import { MatDialog} from '@angular/material/dialog';
 import { MotusService } from 'src/app/services/motus.service';
+import { ReglesComponent } from '../regles/regles.component';
 
 @Component({
   selector: 'app-game',
@@ -17,15 +20,19 @@ export class GameComponent {
 
   liste : string[] = ["PASTEQUE", "MAISON", "MANGER", "ORDINATEUR"]
 
+  bodyText!: string;
 
   constructor(
-    public motusService : MotusService
+    public motusService : MotusService,
+    public dialog: MatDialog
+   
   ){}
 
   ngOnInit(){
     this.joueur = this.motusService.prenom;
     this.choisirMotDansLaListe();
     console.log("le mot choisi est", this.choisirMotDansLaListe());
+
   }
 
   updateValueLetter(lettre:string){
@@ -39,4 +46,16 @@ export class GameComponent {
     this.motusService.getMotATrouver(motATrouver);
     return motATrouver;
   }
+
+  openDialog() {
+    this.dialog.open(ReglesComponent);
+  }
+
+
 }
+
+
+
+
+   
+
